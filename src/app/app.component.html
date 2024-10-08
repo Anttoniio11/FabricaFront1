@@ -1,3 +1,4 @@
+<section>
 <button (click)="crearTransaccion()">Crear</button>
 <table>
   <thead>
@@ -36,14 +37,28 @@
 @if(formTransaccion){
   <form [formGroup] = "formTransaccion" (submit)="guardarTransaccion()">
     <label for="monto">Monto</label>
-    <input formControlName="monto" tupe="number" id="monto">
+    <input formControlName="monto" type="number" id="monto">
 
     <label for="motivo">Motivo</label>
     <textarea formControlName="motivo" name="" id="motivo"></textarea>
+
+    <label for="tipo">Tipo</label>
+    <select formControlName="id_tipo_transaccion" id="tipo">
+      <option [value]="null">Seleccione un tipo...</option>
+      @for (item of tipoTransacciones; track $index){
+        <option [value]="item.id">{{item.tipo_transaccion}}</option>
+      }
+    </select>
+
+    <label for="fecha">Fecha</label>
+    <input formControlName="fecha" type="date" id="fecha">
+
     <button type="submit">Guardar</button>
     <button (click)="cancelarTransaccion()">Cancelar</button>
   </form>
 }
+</section>
+
 
 
 
