@@ -26,6 +26,7 @@
     "paths": {
       "@shared/*":["./src/app/shared/*"],
       "@env/*":["./src/environments/*"],
+      "@pages/*":["./src/app/pages/*"],
     }
   },
   "angularCompilerOptions": {
