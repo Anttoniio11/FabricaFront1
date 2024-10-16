@@ -1,0 +1,16 @@
+<section>
+  <div class="container">
+      <form class="form" (submit)="login()" >
+          <h2>Iniciar Sesion</h2>
+          <div class="grupo">
+              <label for="username">Usuario</label>
+              <input [(ngModel)]="email" type="text" id="username" name="username" required>
+          </div>
+          <div class="grupo">
+              <label for="password">Contraseña</label>
+              <input [(ngModel)]="password" type="password" id="password" name="password" required>
+          </div>
+          <button type="submit">Entrar</button>
+      </form>
+  </div>
+</section>

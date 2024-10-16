@@ -1,5 +1,5 @@
 button {
-  background-color: #4CAF50;
+  background-color: #3d87f5;
   color: white;
   border: none;
   padding: 10px 15px;
@@ -13,7 +13,7 @@ button {
 }
 
 button:hover {
-  background-color: #256929;
+  background-color: #2b66be;
 }
 
 table {
@@ -30,7 +30,7 @@ th, td {
 }
 
 th {
-  background-color: #4CAF50;
+  background-color: #3d87f5;
   color: white;
   text-align: left;
 }
