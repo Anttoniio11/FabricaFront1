@@ -1,4 +1,4 @@
-<section>
+<!-- <section>
   <div class="container">
       <form class="form" (submit)="login()" >
           <h2>Iniciar Sesion</h2>
@@ -12,5 +12,47 @@
           </div>
           <button type="submit">Entrar</button>
       </form>
+  </div>
+</section> -->
+
+<section class="login">
+  <div class="container-login">
+
+    <div class="animaciones">
+
+    </div>
+
+    <div class="form-login">
+      <div class="form-container">
+
+        <div class="logo">
+          <picture>
+            <img src="/iconoRS.jpg" alt="">
+          </picture>
+        </div>
+
+        <div class="welcome">
+          <h1>welcome back!</h1>
+          <span>Please enter your details</span>
+        </div>
+
+        <form class="form" (submit)="login()" >
+          <div class="container-input">
+              <label for="email" [attr.name]="email"></label>
+              <input [(ngModel)]="email" type="text" id="email" name="email" required>
+          </div>
+          <div class="container-input">
+              <label for="password"></label>
+              <input [(ngModel)]="password" type="password" id="password" name="password" required>
+          </div>
+          <div class="">
+            <button type="submit">Login</button>
+          </div>
+        </form>
+
+
+        <div></div>
+      </div>
+    </div>
   </div>
 </section>
