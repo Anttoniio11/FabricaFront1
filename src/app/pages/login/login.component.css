@@ -160,31 +160,33 @@ button:hover {
   outline: none;
 }
 
-.form .container-input::before{
+.form .container-input::after{
   position: absolute;
   bottom: 0;
   content:"";
   width: 100%;
   height: 1px;
-  background-color: rgb(228, 228, 228);
   left: 0;
   right: 0;
   background-color: black;
 }
 
-.form .container-input label::after{
-  content: attr();
+.form .container-input::before{
+  content: attr(texto);
   position: absolute;
   width: 20px;
   height: 10px;
-  top: 7;
-  left: 5;
+  top: 10px;
+  left: 5px;
   font-size: 15px;
   transform: 0.5s;
+  transition: 0.5s;
 }
 
-
-
+.form .focus::before{
+  transform: translateY(-20px);
+  font-size: 13px;
+}
 
 
 

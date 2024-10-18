@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ThisReceiver } from '@angular/compiler';
-import { Component, inject, OnDestroy } from '@angular/core';
+import { Component, ElementRef, inject, OnDestroy, ViewChild} from '@angular/core';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginDto } from '@shared/dto/login-dto';
@@ -16,6 +16,8 @@ import { Subscription } from 'rxjs';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnDestroy{
+
+  @ViewChild('formulario')formulario:ElementRef = {} as ElementRef;
 
   private auth_service = inject(AuthService);
   private token_service = inject (TokenService);
@@ -43,6 +45,20 @@ export class LoginComponent implements OnDestroy{
           this.token_service.setToken(token);
         }
       })
+  }
+
+  addFocus(){
+    let formulario =  this.formulario.nativeElement;
+    let contenedores = this.formulario.nativeElement.querySelectorAll('.container-input')
+
+    contenedores.forEach((element:any) => {
+      if(element.classList.contains('focus')){
+        element.classList.remove('focus')
+      }else{
+        element.classList.add('focus')
+      }
+      console.log(element)
+    });
   }
 
 }

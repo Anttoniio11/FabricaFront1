@@ -36,14 +36,14 @@
           <span>Please enter your details</span>
         </div>
 
-        <form class="form" (submit)="login()" >
-          <div class="container-input">
-              <label for="email" [attr.name]="email"></label>
-              <input [(ngModel)]="email" type="text" id="email" name="email" required>
+        <form #formulario class="form" (submit)="login()" >
+          <div [attr.texto]="'email'" class="container-input">
+              <label for="email"></label>
+              <input (click)="addFocus()" [(ngModel)]="email" type="text" id="email" name="email" required>
           </div>
-          <div class="container-input">
+          <div [attr.texto]="'password'" class="container-input">
               <label for="password"></label>
-              <input [(ngModel)]="password" type="password" id="password" name="password" required>
+              <input (click)="addFocus()" [(ngModel)]="password" type="password" id="password" name="password" required>
           </div>
           <div class="">
             <button type="submit">Login</button>
